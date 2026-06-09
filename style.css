@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif, Arial;
+}
+
+body {
+    background-color: #0f0f0f; /* YouTube qora foni */
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* 2. YUQORI QISM (HEADER) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: 56px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0f0f0f;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+/* Qidiruv paneli */
+.header-center {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 40%;
+    max-width: 600px;
+}
+
+.search-form {
+    display: flex;
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    background-color: #121212;
+    border: 1px solid #303030;
+    padding: 8px 16px;
+    border-radius: 40px 0 0 40px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #1c62b9;
+}
+
+.search-btn {
+    background-color: #222222;
+    border: 1px solid #303030;
+    border-left: none;
+    padding: 0 20px;
+    border-radius: 0 40px 40px 0;
+    cursor: pointer;
+    color: white;
+}
+
+.mic-btn {
+    background-color: #272727;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    color: white;
+    cursor: pointer;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.header-right button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 3. ASOSIY KONTEYNER VA SIDEBAR */
+.main-container {
+    display: flex;
+    margin-top: 56px; /* Header tagida qolib ketmasligi uchun */
+}
+
+.sidebar {
+    width: 240px;
+    height: calc(100vh - 56px);
+    position: fixed;
+    top: 56px;
+    left: 0;
+    padding: 12px;
+    background-color: #0f0f0f;
+    overflow-y: auto;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #272727;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #303030;
+    margin: 12px 0;
+}
+
+.sidebar-title {
+    font-size: 14px;
+    padding: 4px 12px;
+    color: #aaa;
+    margin-bottom: 4px;
+}
+
+/* 4. ASOSIY MAZMUN (CONTENT AREA) */
+.content-area {
+    margin-left: 240px; /* Sidebar kengligi qadar suriladi */
+    padding: 24px;
+    width: calc(100% - 240px);
+}
+
+/* Kategoriya tugmachalari */
+.categories-tags {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.categories-tags::-webkit-scrollbar {
+    display: none; /* Skrolni yashirish */
+}
+
+.tag {
+    background-color: #272727;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tag:hover {
+    background-color: #3f3f3f;
+}
+
+.tag.active {
+    background-color: white;
+    color: black;
+}
+
+/* 5. VIDEOLAR TO'PLAMI (GRID MANTIQI) */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px
+}
+.video-player {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
